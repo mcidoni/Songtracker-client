@@ -13,5 +13,52 @@
     </head>
     <body>
       <h1>Browser Template</h1>
+      <br>
+      <p id="message"></p>
+      <section id="sign-up-section">
+        <form id="sign-up-form">
+          <fieldset>
+            <h3>sign up</h3>
+            <label for="sign-up-email">email</label>
+            <input id="sign-up-email" type="email" name="credentials[email]" placeholder="Email">
+            <label for="sign-up-password">password</label>
+            <input id="sign-up-password" type="password" name="credentials[password]" placeholder="Password">
+            <label for="sign-up-password_confirmation">confirm password</label>
+            <input id="sign-up-password_confirmmation" type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+            <input type="submit" value="Sign Up">
+          </fieldset>
+        </form>
+      </section>
+      <br>
+      <section id="sign-in-section">
+        <form id="sign-in-form">
+          <fieldset>
+            <h3>sign in</h3>
+            <label for="sign-in-email">email</label>
+            <input id="sign-in-email" type="email" name="credentials[email]" placeholder="Email">
+            <label for="sign-in-password">password</label>
+            <input id="sign-in-password" type="password" name="credentials[password]" placeholder="Password">
+            <input type="submit" value="Sign In">
+          </fieldset>
+        </form>
+      </section>
+      <br>
+      <section id="change-password-section" class="hidden">
+        <form id="change-password-form">
+          <fieldset>
+            <h3>change password</h3>
+            <label for="change-password-old">current password</label>
+            <input id="change-password-old" type="password" name="passwords[old]" placeholder="Current Password">
+            <label for="change-password-new">new password</label>
+            <input id="change-password-new" type="password" name="passwords[new]" placeholder="New Password">
+            <input type="submit" value="Change Password">
+          </fieldset>
+        </form>
+      </section>
+      <br>
+      <section id="sign-out-section">
+        <button id="sign-out">Sign Out</button>
+      </section>
+      <br>
     </body>
 </html>
