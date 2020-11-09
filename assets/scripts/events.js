@@ -1,7 +1,7 @@
 'use strict'
 const api = require('./api')
 const ui = require('./ui')
-const getFormFields = require('../../../lib/get-form-fields')
+const getFormFields = require('../../lib/get-form-fields')
 // const store = require('./store')
 
 const onSignUp = e => {
@@ -19,11 +19,6 @@ const onSignIn = e => {
   const formData = getFormFields(form)
   api.signIn(formData)
     .then(ui.signInSuccess)
-    .then(() => {
-      api.createGame()
-        .then(ui.createGameSuccess)
-        .catch(ui.createGameFailure)
-    })
     .catch(ui.signInFailure)
 }
 
