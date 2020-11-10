@@ -29,7 +29,7 @@ const signInFailure = err => {
 }
 
 const changePasswordSuccess = () => {
-  $("#message").text('Successfully changed password for ' + store.user.email)
+  $("#message").text('Successfully changed password!')
   $('#change-password-form').trigger('reset')
 }
 
@@ -38,7 +38,7 @@ const changePasswordFailure = err => {
 }
 
 const signOutSuccess = () => {
-  $("#message").text('Successfully signed out ' + store.user.email)
+  $("#message").text('You have signed out!')
   delete store.user
   $('#change-password-section').css('display', 'none')
   $('#sign-out-section').css('display', 'none')

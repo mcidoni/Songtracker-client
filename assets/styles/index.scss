@@ -16,21 +16,30 @@ h1  {
   text-shadow: 4px, 4px, black;
   color: dodgerblue;
   font-size: 90px;
+  text-shadow: 4px 4px black;
 }
 
 #sign-up-form {
   background-color: lemonchiffon;
   border-radius: 30px;
   border: 0px;
+  box-shadow: 4px 4px black;
 }
 
 #sign-in-form {
   background-color: aquamarine;
   border-radius: 30px;
+  box-shadow: 4px 4px black;
 }
 
 #change-password-form {
-  background-color: lightcoral;
+  background-color: lightpink;
   border-radius: 30px;
+  box-shadow: 4px 4px black;
+}
+
+fieldset {
+  border: none;
+  padding: 30px;
 }
 
