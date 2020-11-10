@@ -50,6 +50,38 @@ const signOutFailure = err => {
   $("#message").text('Sign out failed, try again')
 }
 
+const addSongSuccess = () => {
+
+}
+
+const addSongFailure = err => {
+  $('#message').text('Failed to add song, please try again.')
+}
+
+const updateSongSuccess = () => {
+
+}
+
+const updateSongFailure = err => {
+  $('#message').text('Failed to update song, please try again.')
+}
+
+const showSongSuccess = () => {
+
+}
+
+const showSongFailure = err => {
+  $('#message').text('Failed to retrieve song, please try again')
+}
+
+const deleteSongSuccess = () => {
+
+}
+
+const deleteSongFailure = err => {
+  $('#message').text('Failed to delete song, please try again.')
+}
+
 module.exports = {
   signUpSuccess,
   signUpFailure,
@@ -58,5 +90,13 @@ module.exports = {
   changePasswordSuccess,
   changePasswordFailure,
   signOutSuccess,
-  signOutFailure
+  signOutFailure,
+  addSongSuccess,
+  addSongFailure,
+  updateSongSuccess,
+  updateSongFailure,
+  showSongSuccess,
+  showSongFailure,
+  deleteSongSuccess,
+  deleteSongFailure
 }
