@@ -22,15 +22,22 @@ h1  {
   background-color: lemonchiffon;
   border-radius: 30px;
   border: 0px;
+  box-shadow: 4px 4px black;
 }
 
 #sign-in-form {
   background-color: aquamarine;
   border-radius: 30px;
+  box-shadow: 4px 4px black;
 }
 
 #change-password-form {
   background-color: lightcoral;
   border-radius: 30px;
+  box-shadow: 4px 4px black;
 }
 
+fieldset {
+  border: none;
+  padding: 30px;
+}
