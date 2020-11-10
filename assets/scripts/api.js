@@ -43,11 +43,53 @@ const signOut = () => {
   })
 }
 
+const addSong = () => {
+  return $.ajax({
+    url: config.apiUrl + '/songs',
+    method: 'POST',
+    headers: {
+      Authorization: `Bearer ${store.user.token}`
+    }
+  })
+}
 
+const updateSong = () => {
+  return $.ajax({
+    url: config.apiUrl + '/songs',
+    method: 'PATCH',
+    headers: {
+      Authorization: `Bearer ${store.user.token}`
+    }
+  })
+}
+
+const showSong = () => {
+  return $.ajax({
+    url: config.apiUrl + '/songs',
+    method: 'GET',
+    headers: {
+      Authorization: `Bearer ${store.user.token}`
+    }
+  })
+}
+
+const deleteSong = () => {
+  return $.ajax({
+    url: config.apiUrl + '/songs',
+    method: 'DELETE',
+    headers: {
+      Authorization: `Bearer ${store.user.token}`
+    }
+  })
+}
 
 module.exports = {
   signUp,
   signIn,
   changePassword,
-  signOut
+  signOut,
+  addSong,
+  updateSong,
+  showSong,
+  deleteSong
 }
