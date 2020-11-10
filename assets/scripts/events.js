@@ -2,6 +2,7 @@
 const api = require('./api')
 const ui = require('./ui')
 const getFormFields = require('../../lib/get-form-fields')
+const { showSongFailure } = require('./ui')
 // const store = require('./store')
 
 const onSignUp = e => {
@@ -38,9 +39,50 @@ const onSignOut = e => {
     .catch(ui.signOutFailure)
 }
 
+const onAddSong = e => {
+  e.preventDefault()
+  const form = e.target
+  const data = getFormFields(form)
+  api.addSong(data)
+    .then(ui.addSongSuccess)
+    .catch(ui.addSongFailure)
+}
+
+const onUpdateSong = e => {
+  e.preventDefault()
+  const form = e.target
+  const data = getFormFields(form)
+  api.updateSong(data)
+    .then(ui.updateSongSuccess)
+    .catch(ui.updateSongFailure)
+}
+
+const onShowSong = e => {
+  e.preventDefault()
+  const form = e.target
+  const data = getFormFields(form)
+  api.showSong(data)
+    .then(ui.showSongSuccess)
+    .catch(showSongFailure)
+}
+
+const onDeleteSong = e => {
+  e.preventDefault()
+  const form = e.target
+  const data = getFormFields(form)
+  api.deleteSong(data)
+    .then(ui.deleteSongSuccess)
+    .catch(ui.deleteSongFailure)
+}
+
+
 module.exports = {
   onSignUp,
   onSignIn,
   onChangePassword,
-  onSignOut
+  onSignOut,
+  onAddSong,
+  onUpdateSong,
+  onShowSong,
+  onDeleteSong
 }
