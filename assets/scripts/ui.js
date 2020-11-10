@@ -51,6 +51,7 @@ const signOutFailure = err => {
 }
 
 const addSongSuccess = () => {
+  $('#message').text('Song successfully added!')
 
 }
 
@@ -74,9 +75,13 @@ const showSongFailure = err => {
   $('#message').text('Failed to retrieve song, please try again')
 }
 
-const deleteSongSuccess = () => {
 
+
+const deleteSongSuccess = () => {
+  $('#message').text('Song successfully deleted!')
 }
+
+
 
 const deleteSongFailure = err => {
   $('#message').text('Failed to delete song, please try again.')
