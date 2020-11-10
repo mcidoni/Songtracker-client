@@ -24,18 +24,21 @@ h1  {
   border-radius: 30px;
   border: 0px;
   box-shadow: 4px 4px black;
+  font-size: 22px;;
 }
 
 #sign-in-form {
   background-color: aquamarine;
   border-radius: 30px;
   box-shadow: 4px 4px black;
+  font-size: 22px;
 }
 
 #change-password-form {
   background-color: lightpink;
   border-radius: 30px;
   box-shadow: 4px 4px black;
+  font-size: 22px;
 }
 
 fieldset {
@@ -43,3 +46,14 @@ fieldset {
   padding: 30px;
 }
 
+input {
+  padding: 2px;
+}
+
+label {
+  padding: 9px;
+}
+
+div {
+  text-align: center;
+}
