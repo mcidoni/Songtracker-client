@@ -22,6 +22,10 @@ const signInSuccess = res => {
   $('#sign-up-section').css('display', 'none')
   $('#sign-in-section').css('display', 'none')
   $('#sign-out').show()
+  $('#add-song-section').show()
+  $('#get-song-section').show()
+  $('#update-song-section').show()
+  $('#delete-song-section').show()
 }
 
 const signInFailure = err => {
@@ -60,6 +64,7 @@ const addSongFailure = err => {
 }
 
 const updateSongSuccess = () => {
+  $('#message').text('Song successfully updated!')
 
 }
 

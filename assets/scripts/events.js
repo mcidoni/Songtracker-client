@@ -57,7 +57,7 @@ const onUpdateSong = e => {
     .catch(ui.updateSongFailure)
 }
 
-const onShowSong = e => {
+const onGetSong = e => {
   e.preventDefault()
   const form = e.target
   const data = getFormFields(form)
@@ -84,6 +84,6 @@ module.exports = {
   onSignOut,
   onAddSong,
   onUpdateSong,
-  onShowSong,
+  onGetSong,
   onDeleteSong
 }
