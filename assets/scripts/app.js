@@ -8,13 +8,24 @@
 const events = require('./events')
 
 $(() => {
-
-  // POST sign-up
+  // account-related actions
   $('#sign-up-form').on('submit', events.onSignUp)
-  // POST sign-in
+
   $('#sign-in-form').on('submit', events.onSignIn)
-  // PATCH change-password
+  
   $('#change-password-form').on('submit', events.onChangePassword)
-  // DELETE sign-out
+  
   $('#sign-out').on('click', events.onSignOut)
+
+  
+  // song-related actions
+  $('#add-song-form').on('submit', events.onAddSong)
+
+  $('#get-song-form').on('submit', events.onGetSong)
+
+  $('#update-song-form').on('submit', events.onUpdateSong)
+
+  $('#delete-song-form').on('submit', events.onDeleteSong)
+
+
 })
