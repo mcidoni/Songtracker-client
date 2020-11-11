@@ -1,4 +1,5 @@
 'use strict'
+const { data } = require('jquery')
 const config = require('./config')
 const store = require('./store')
 
@@ -43,29 +44,31 @@ const signOut = () => {
   })
 }
 
-const addSong = () => {
+const addSong = (data) => {
   return $.ajax({
     url: config.apiUrl + '/songs',
     method: 'POST',
     headers: {
       Authorization: `Bearer ${store.user.token}`
-    }
+    },
+    data: data
   })
 }
 
-const updateSong = () => {
+const updateSong = (data) => {
   return $.ajax({
     url: config.apiUrl + '/songs',
     method: 'PATCH',
     headers: {
       Authorization: `Bearer ${store.user.token}`
-    }
+    },
+    data: data
   })
 }
 
-const showSong = () => {
+const showSong = (id) => {
   return $.ajax({
-    url: config.apiUrl + '/songs',
+    url: config.apiUrl + `/songs/${id}`,
     method: 'GET',
     headers: {
       Authorization: `Bearer ${store.user.token}`

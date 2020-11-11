@@ -75,6 +75,11 @@ const onDeleteSong = e => {
     .catch(ui.deleteSongFailure)
 }
 
+const getAllSongs = e => {
+  e.preventDefault()
+      
+}
+
 
 
 module.exports = {

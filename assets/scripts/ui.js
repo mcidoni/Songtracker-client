@@ -14,8 +14,8 @@ const signUpFailure = err => {
 }
 
 const signInSuccess = res => {
-  $("#message").text('Successfully signed in ' + res.user.email)
   store.user = res.user
+  $("#message").text('Successfully signed in ' + res.user.email)
   $('#sign-in-form').trigger('reset')
   $('#change-password-section').css('display', 'block')
   $('#sign-out-section').css('display', 'block')
@@ -26,6 +26,7 @@ const signInSuccess = res => {
   $('#get-song-section').show()
   $('#update-song-section').show()
   $('#delete-song-section').show()
+  $('#show-all-songs').show()
 }
 
 const signInFailure = err => {
