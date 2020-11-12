@@ -74,7 +74,7 @@ const updateSongFailure = err => {
 }
 
 const showSongSuccess = () => {
-
+  $('#message').text(`Here's your song! `)
 }
 
 const showSongFailure = err => {
