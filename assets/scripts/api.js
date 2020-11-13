@@ -1,5 +1,5 @@
 'use strict'
-const { data } = require('jquery')
+const $ = require('jquery')
 const config = require('./config')
 const store = require('./store')
 
@@ -45,6 +45,7 @@ const signOut = () => {
 }
 
 const addSong = (data) => {
+  console.log('data', data)
   return $.ajax({
     url: config.apiUrl + '/songs',
     method: 'POST',

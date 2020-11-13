@@ -57,7 +57,7 @@ const signOutFailure = err => {
 
 const addSongSuccess = () => {
   $('#message').text('Song successfully added!')
-
+  
 }
 
 const addSongFailure = err => {
