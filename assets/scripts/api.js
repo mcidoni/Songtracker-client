@@ -87,6 +87,18 @@ const deleteSong = () => {
   })
 }
 
+const getAllSongs = () => {
+  return $.ajax({
+    url: config.apiUrl + '/songs',
+    method: 'GET',
+    headers: {
+      Authorization: `Bearer ${store.user.token}`
+    }
+  })
+}
+
+
+
 module.exports = {
   signUp,
   signIn,
@@ -95,5 +107,6 @@ module.exports = {
   addSong,
   updateSong,
   showSong,
-  deleteSong
+  deleteSong,
+  getAllSongs
 }

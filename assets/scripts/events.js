@@ -63,7 +63,7 @@ const onGetSong = e => {
   const data = getFormFields(form)
   api.showSong(data)
     .then(ui.showSongSuccess)
-    .catch(showSongFailure)
+    .catch(ui.showSongFailure)
 }
 
 const onDeleteSong = e => {
@@ -76,8 +76,9 @@ const onDeleteSong = e => {
 }
 
 const getAllSongs = e => {
-  e.preventDefault()
-      
+  api.getAllSongs()
+    .then(ui.getSongsSuccess)
+    .catch(ui.getSongsFailure)
 }
 
 
@@ -90,5 +91,6 @@ module.exports = {
   onAddSong,
   onUpdateSong,
   onGetSong,
-  onDeleteSong
+  onDeleteSong,
+  getAllSongs
 }
