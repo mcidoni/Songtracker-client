@@ -80,7 +80,12 @@ const deleteSongFailure = err => {
 }
 
 const getSongsSuccess = data => {
-  console.log('all songs', data)
+  const allSongs = data.songs
+  console.log('all songs ', allSongs)
+  const songSection = $('#all-songs')
+  allSongs.forEach(song => {
+    songSection.append(`<div class='song-info'><p>Title: ${song.title}</p><p>Artist:${song.artist}</p><p>Album: ${song.album}</p><p>Genre: ${song.genre}</p><button>Delete Song</button></div>`)
+  })
 }
 
 const getSongsFailure = err => {
