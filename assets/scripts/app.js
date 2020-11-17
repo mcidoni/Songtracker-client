@@ -21,11 +21,10 @@ $(() => {
   // song-related actions
   $('#add-song-form').on('submit', events.onAddSong)
 
-  $('#get-song-form').on('submit', events.onGetSong)
-
   $('#update-song-form').on('submit', events.onUpdateSong)
 
   $('#delete-song-form').on('submit', events.onDeleteSong)
 
+  $('#get-all-songs').on('click', events.getAllSongs)
 
 })

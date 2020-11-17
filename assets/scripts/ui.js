@@ -1,7 +1,7 @@
 'use strict'
 
 const store = require('./store')
-// const events = require('.././scripts/events')
+const events = require('./events')
 
 
 const signUpSuccess = res => {
@@ -23,10 +23,8 @@ const signInSuccess = res => {
   $('#sign-in-section').css('display', 'none')
   $('#sign-out').show()
   $('#add-song-section').show()
-  $('#get-song-section').show()
-  $('#update-song-section').show()
-  $('#delete-song-section').show()
-  $('#show-all-songs').show()
+  $('your-songs').show()
+  events.getAllSongs()
 }
 
 const signInFailure = err => {
@@ -57,7 +55,6 @@ const signOutFailure = err => {
 
 const addSongSuccess = () => {
   $('#message').text('Song successfully added!')
-  
 }
 
 const addSongFailure = err => {
@@ -66,32 +63,40 @@ const addSongFailure = err => {
 
 const updateSongSuccess = () => {
   $('#message').text('Song successfully updated!')
-
+  
 }
 
 const updateSongFailure = err => {
   $('#message').text('Failed to update song, please try again.')
 }
 
+
+const deleteSongSuccess = () => {
+  $('#message').text('Song successfully deleted!')
+}
+
+const deleteSongFailure = err => {
+  $('#message').text('Failed to delete song, please try again.')
+}
+
+const getSongsSuccess = data => {
+  console.log('all songs', data)
+}
+
+const getSongsFailure = err => {
+  $('#message').text('Failed to get songs')
+}
 const showSongSuccess = () => {
   $('#message').text(`Here's your song! `)
 }
+
+
 
 const showSongFailure = err => {
   $('#message').text('Failed to retrieve song, please try again')
 }
 
 
-
-const deleteSongSuccess = () => {
-  $('#message').text('Song successfully deleted!')
-}
-
-
-
-const deleteSongFailure = err => {
-  $('#message').text('Failed to delete song, please try again.')
-}
 
 module.exports = {
   signUpSuccess,
@@ -106,8 +111,12 @@ module.exports = {
   addSongFailure,
   updateSongSuccess,
   updateSongFailure,
-  showSongSuccess,
-  showSongFailure,
   deleteSongSuccess,
-  deleteSongFailure
+  deleteSongFailure,
+  getSongsSuccess,
+  getSongsFailure,
+  showSongSuccess,
+  showSongFailure
 }
+
+
