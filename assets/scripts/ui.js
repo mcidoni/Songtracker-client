@@ -73,6 +73,7 @@ const updateSongFailure = err => {
 
 const deleteSongSuccess = () => {
   $('#message').text('Song successfully deleted!')
+
 }
 
 const deleteSongFailure = err => {
@@ -81,24 +82,15 @@ const deleteSongFailure = err => {
 
 const getSongsSuccess = data => {
   const allSongs = data.songs
-  console.log('all songs ', allSongs)
   const songSection = $('#all-songs')
   allSongs.forEach(song => {
-    songSection.append(`<div class='song-info'><p>Title: ${song.title}</p><p>Artist:${song.artist}</p><p>Album: ${song.album}</p><p>Genre: ${song.genre}</p><button>Delete Song</button></div>`)
+    songSection.append(`<div class='song-info'><p>Title: ${song.title}</p><p>Artist:${song.artist}</p><p>Album: ${song.album}</p><p>Genre: ${song.genre}</p>
+    <button id='${delete-song}' data-songId='${song._id}'>Delete Song</button><button>Update Song</button></div>`)
   })
 }
 
 const getSongsFailure = err => {
   $('#message').text('Failed to get songs')
-}
-const showSongSuccess = () => {
-  $('#message').text(`Here's your song! `)
-}
-
-
-
-const showSongFailure = err => {
-  $('#message').text('Failed to retrieve song, please try again')
 }
 
 
@@ -119,9 +111,7 @@ module.exports = {
   deleteSongSuccess,
   deleteSongFailure,
   getSongsSuccess,
-  getSongsFailure,
-  showSongSuccess,
-  showSongFailure
+  getSongsFailure
 }
 
 

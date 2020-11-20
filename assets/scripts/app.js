@@ -23,7 +23,7 @@ $(() => {
 
   $('#update-song-form').on('submit', events.onUpdateSong)
 
-  $('#delete-song-form').on('submit', events.onDeleteSong)
+  $('#all-songs').on('click', 'button', events.onDeleteSong)
 
   $('#get-all-songs').on('click', events.getAllSongs)
 

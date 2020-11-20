@@ -2,7 +2,6 @@
 const api = require('./api')
 const ui = require('./ui')
 const getFormFields = require('../../lib/get-form-fields')
-const { showSongFailure } = require('./ui')
 // const store = require('./store')
 
 const onSignUp = e => {
@@ -68,9 +67,9 @@ const onGetSong = e => {
 
 const onDeleteSong = e => {
   e.preventDefault()
-  const form = e.target
-  const data = getFormFields(form)
-  api.deleteSong(data)
+  const id = $(e.target).data('songId')
+  console.log('songId')
+  api.deleteSong(id)
     .then(ui.deleteSongSuccess)
     .catch(ui.deleteSongFailure)
 }

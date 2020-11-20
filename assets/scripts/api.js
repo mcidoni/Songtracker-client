@@ -67,19 +67,19 @@ const updateSong = (data) => {
   })
 }
 
-const showSong = (id) => {
+// const showSong = (id) => {
+//   return $.ajax({
+//     url: config.apiUrl + `/songs/${id}`,
+//     method: 'GET',
+//     headers: {
+//       Authorization: `Bearer ${store.user.token}`
+//     }
+//   })
+// }
+
+const deleteSong = (id) => {
   return $.ajax({
     url: config.apiUrl + `/songs/${id}`,
-    method: 'GET',
-    headers: {
-      Authorization: `Bearer ${store.user.token}`
-    }
-  })
-}
-
-const deleteSong = () => {
-  return $.ajax({
-    url: config.apiUrl + '/songs',
     method: 'DELETE',
     headers: {
       Authorization: `Bearer ${store.user.token}`
@@ -106,7 +106,6 @@ module.exports = {
   signOut,
   addSong,
   updateSong,
-  showSong,
   deleteSong,
   getAllSongs
 }
