@@ -67,8 +67,8 @@ const onGetSong = e => {
 
 const onDeleteSong = e => {
   e.preventDefault()
-  const id = $(e.target).data('songId')
-  console.log('songId')
+  // same exact thing for update song
+  const id = $(e.target).data('songid')
   api.deleteSong(id)
     .then(ui.deleteSongSuccess)
     .catch(ui.deleteSongFailure)

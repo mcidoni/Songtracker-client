@@ -67,15 +67,6 @@ const updateSong = (data) => {
   })
 }
 
-// const showSong = (id) => {
-//   return $.ajax({
-//     url: config.apiUrl + `/songs/${id}`,
-//     method: 'GET',
-//     headers: {
-//       Authorization: `Bearer ${store.user.token}`
-//     }
-//   })
-// }
 
 const deleteSong = (id) => {
   return $.ajax({
