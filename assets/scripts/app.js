@@ -15,7 +15,7 @@ $(() => {
   
   $('#change-password-form').on('submit', events.onChangePassword)
   
-  $('#sign-out').on('click', events.onSignOut)
+  $('#sign-out-form').on('submit', events.onSignOut)
 
   
   // song-related actions
@@ -23,7 +23,9 @@ $(() => {
 
   $('#update-song-form').on('submit', events.onUpdateSong)
 
-  $('#delete-song-form').on('submit', events.onDeleteSong)
+  // update button will be similar to this (but will open update-song form, will have the same data that the button has been given
+  // aka the song's ID
+  $('#all-songs').on('click', 'button', events.onDeleteSong)
 
   $('#get-all-songs').on('click', events.getAllSongs)
 
