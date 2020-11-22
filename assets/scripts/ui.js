@@ -23,7 +23,8 @@ const signInSuccess = res => {
   $('#sign-in-section').css('display', 'none')
   $('#sign-out').show()
   $('#add-song-section').show()
-  $('your-songs').show()
+  $('.your-songs').show()
+  $('#update-song-section').show()
 }
 
 const signInFailure = () => {
@@ -46,6 +47,8 @@ const signOutSuccess = () => {
   $('#sign-out-section').css('display', 'none')
   $('#sign-up-section').css('display', 'block')
   $('#sign-in-section').css('display', 'block')
+  $('#update-song-section').hide()
+  $('.your-songs').hide()
 }
 
 const signOutFailure = err => {
@@ -90,10 +93,13 @@ const getSongsSuccess = data => {
 
   allSongs.forEach(song => {
     if (song.owner === store.user._id) {
-      songHtml.push(`<div class='song-info'><p>Title: ${song.title}</p><p>Artist:${song.artist}</p><p>Album: ${song.album}</p><p>Genre: ${song.genre}</p><button id='${delete-song}' data-songId='${song._id}'>Delete Song</button><button data-songId='${song._id}>Update Song</button></div>`)
+      songHtml.push(`<div class='song-info'><p>Title: ${song.title}</p><p>Artist:${song.artist}</p><p>Album: ${song.album}</p><p>Genre: ${song.genre}</p><button id='${delete-song}' data-songId='${song._id}'>Delete Song</button><button id=‘open-song-update-form’ data-singId=${song._id}>Update Song</button`)
     }
   })
-  songSection.html(songHtml.join(""))
+  console.log('this is songHTML', songHtml)
+  const allSongHtmlJoined = songHtml.join("")
+  console.log('this is allsongs joined', allSongHtmlJoined)
+  songSection.html(songHtml.join(" "))
 }
 
 const getSongsFailure = err => {
