@@ -25,17 +25,20 @@ As a user, I want to organize my songs
 - Add more functionality to search for songs based on individual properties (genre, title, etc.)
 - Include more animation to give the site a more professional feel
 
-## Images: 
-
----
-
 
 ## Links:
 
 API: https://evening-coast-74280.herokuapp.com/
+
+API Repo: https://github.com/mcidoni/Songtracker-API 
+
 Client Repo: https://github.com/mcidoni/Songtracker-client
 
 Client: https://mcidoni.github.io/Songtracker-client/ 
+
+## Images: 
+
+---
 
 #### Wireframe:
 
