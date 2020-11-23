@@ -1,4 +1,4 @@
-## SONGTRACKER
+## SONGTRACKER:
 
 Thanks for checking out Songtracker! Songtracker is a simple but useful app that allows you to keep track of your favorite songs, without having to be a subscriber to a streaming platform. Users are able to securely add, edit, and delete songs from their library, and can look up specific songs as well that are stored in their library.
 
@@ -17,7 +17,7 @@ As a user, I want to organize my songs
 - JavaScript
 - JQuery
 - HTML
-- CSS (including SASS and FlexBox)
+- CSS (including SASS)
 
 ## Unsolved Problems:
 
@@ -33,8 +33,10 @@ As a user, I want to organize my songs
 ## Links:
 
 API: https://evening-coast-74280.herokuapp.com/
+Client Repo: https://github.com/mcidoni/Songtracker-client
 
 Client: 
+
 #### Wireframe:
 
-[Wireframes go here]
+[Imgur](https://i.imgur.com/Bld0qyU.png)
