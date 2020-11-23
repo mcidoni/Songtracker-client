@@ -80,6 +80,10 @@ const getAllSongs = e => {
     .catch(ui.getSongsFailure)
 }
 
+const onPreUpdateSong = e => {
+  e.preventDefault()
+}
+
 
 
 module.exports = {

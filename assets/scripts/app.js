@@ -6,6 +6,7 @@
 // use require without a reference to ensure a file is bundled
 // require('./example')
 const events = require('./events')
+const ui = require('./ui')
 
 $(() => {
   // account-related actions
@@ -23,9 +24,11 @@ $(() => {
 
   $('#update-song-form').on('submit', events.onUpdateSong)
 
+  $('body').on('click', '#open-song-update-form', ui.showUpdateForm)
+
   // update button will be similar to this (but will open update-song form, will have the same data that the button has been given
   // aka the song's ID
-  $('#all-songs').on('click', 'button', events.onDeleteSong)
+  $('body').on('click', '#song-delete-button', events.onDeleteSong)
 
   $('#get-all-songs').on('click', events.getAllSongs)
 

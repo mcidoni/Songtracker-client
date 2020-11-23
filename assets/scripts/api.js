@@ -45,7 +45,6 @@ const signOut = () => {
 }
 
 const addSong = (data) => {
-  console.log('data', data)
   return $.ajax({
     url: config.apiUrl + '/songs',
     method: 'POST',
@@ -58,7 +57,7 @@ const addSong = (data) => {
 
 const updateSong = (data) => {
   return $.ajax({
-    url: config.apiUrl + '/songs',
+    url: config.apiUrl + `/songs/${data.song.id}`,
     method: 'PATCH',
     headers: {
       Authorization: `Bearer ${store.user.token}`

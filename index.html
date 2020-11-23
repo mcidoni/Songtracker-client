@@ -61,15 +61,33 @@
         <button type="submit" id="sign-out" class="hidden">Sign Out</button>
       </form>
       <br>
-      <div class="your-songs">
+      <div class="your-songs hidden">
         <h2>your songs</h2>
         <button id="get-all-songs">Show All Songs</button>
       </div>
       <section id="all-songs"></section>
+      <section id="update-song-section" class="hidden">
+        <form id="update-song-form">
+          <fieldset>
+            <h3>update song</h3>
+            <label for="update-id">song id</label>
+            <input id="update-id" type="text" name="song[id]">
+            <label for="update-title">title</label>
+            <input id="update-title" type="text" name="song[title]">
+            <label for="update-artist">artist</label>
+            <input id="update-artist" type="text" name="song[artist]">
+            <label for="update-album">album</label>
+            <input id="update-album" type="text" name="song[album]">
+            <label for="update-genre">genre</label>
+            <input id="update-genre" type="text" name="song[genre]">
+            <input type="submit" value="Update Song">
+          </fieldset>
+        </form>
+      </section>
       <section id="add-song-section" class="hidden">
         <form id="add-song-form">
           <fieldset>
-            <h3>add/update song</h3>
+            <h3>add song</h3>
             <label for="add-title">title</label>
             <input id="add-title" type="text" name="song[title]">
             <label for="add-artist">artist</label>

@@ -21,14 +21,20 @@ As a user, I want to organize my songs
 
 ## Unsolved Problems:
 
-- 
-- 
-- 
+- I would like to add more styling
+- Add more functionality to search for songs based on individual properties (genre, title, etc.)
+- Include more animation to give the site a more professional feel
 
 ## Images: 
 
 ---
 
+
+## Links:
+
+API: https://evening-coast-74280.herokuapp.com/
+
+Client: 
 #### Wireframe:
 
 [Wireframes go here]
