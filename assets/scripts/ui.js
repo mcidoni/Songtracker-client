@@ -53,6 +53,10 @@ const signOutSuccess = () => {
   $('#sign-in-section').css('display', 'block')
   $('#update-song-section').hide()
   $('.your-songs').hide()
+  $('#add-song-section').hide()
+  const songSection = $('#all-songs')
+  songSection.hide()
+  $('#sign-out').hide()
 }
 
 const signOutFailure = err => {
