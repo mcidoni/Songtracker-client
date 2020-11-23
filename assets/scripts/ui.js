@@ -24,7 +24,11 @@ const signInSuccess = res => {
   $('#sign-out').show()
   $('#add-song-section').show()
   $('.your-songs').show()
-  $('#update-song-section').show()
+  $('#update-song-section').hide()
+}
+
+const showUpdateForm = () => {
+  $("#update-song-section").show()
 }
 
 const signInFailure = () => {
@@ -66,7 +70,10 @@ const addSongFailure = err => {
 
 const updateSongSuccess = () => {
   $('#message').text('Song successfully updated!')
-  
+  const songSection = $('#all-songs')
+  songSection.hide()
+  const songUpdateForm = $('#update-song-form')
+  songUpdateForm.trigger('reset')
 }
 
 const updateSongFailure = err => {
@@ -93,12 +100,20 @@ const getSongsSuccess = data => {
 
   allSongs.forEach(song => {
     if (song.owner === store.user._id) {
-      songHtml.push(`<div class='song-info'><p>Title: ${song.title}</p><p>Artist:${song.artist}</p><p>Album: ${song.album}</p><p>Genre: ${song.genre}</p><button id='${delete-song}' data-songId='${song._id}'>Delete Song</button><button id=‘open-song-update-form’ data-singId=${song._id}>Update Song</button`)
+      songHtml.push(`
+        <div class="song-info">
+          <p>Song ID: ${song._id}</p>
+          <p>Title: ${song.title}</p>
+          <p>Artist:${song.artist}</p>
+          <p>Album: ${song.album}</p>
+          <p>Genre: ${song.genre}</p>
+          <button id="song-delete-button" data-songId="${song._id}">Delete Song</button>
+          <button id="open-song-update-form" data-songId=${song._id}>Update Song</button>
+        </div>
+      `)
     }
   })
-  console.log('this is songHTML', songHtml)
   const allSongHtmlJoined = songHtml.join("")
-  console.log('this is allsongs joined', allSongHtmlJoined)
   songSection.html(songHtml.join(" "))
 }
 
@@ -124,7 +139,8 @@ module.exports = {
   deleteSongSuccess,
   deleteSongFailure,
   getSongsSuccess,
-  getSongsFailure
+  getSongsFailure,
+  showUpdateForm
 }
 
 
