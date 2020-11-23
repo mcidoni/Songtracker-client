@@ -35,7 +35,7 @@ As a user, I want to organize my songs
 API: https://evening-coast-74280.herokuapp.com/
 Client Repo: https://github.com/mcidoni/Songtracker-client
 
-Client: 
+Client: https://mcidoni.github.io/Songtracker-client/ 
 
 #### Wireframe:
 
